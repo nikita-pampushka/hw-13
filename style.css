@@ -6,6 +6,7 @@ body {
     font-family: 'Graphik LCG Regular', sans-serif;
     font-weight: 400;
     color: #000000;
+    min-width: 360px;
 }
 
 .container {
@@ -590,31 +591,38 @@ body {
     transition-duration: 1s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1290px) {
     .header-box {
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-around;
     }
 
     .nav-list {
-        flex-direction: column;
-        width: 100%;
+        width: 480px;
+    }
+
+    .nav {
+        margin-top: 0;
     }
 
     .header-logo {
-        margin-bottom: 20px;
-        margin-right: 0;
-    }
-
-    .nav-item {
-        margin-bottom: 20px;
+        margin: 0;
     }
 
     .buttons {
-        margin-left: 0;
+        margin: 0;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+    }
+
+    .empty {
+        margin-bottom: 10px;
+        margin-right: 0;
     }
     
     .intro {
+        text-align: center;
         background-size: contain;
         background-position: 0 10%;
         padding: 100% 10px 10% 10px;
@@ -622,7 +630,6 @@ body {
     
     .intro-title {
         width: 100%;
-        text-align: center;
         font-size: 40px;
         line-height: 50px;
     }
@@ -638,13 +645,13 @@ body {
     }
 
     .clients {
-        padding: 10px 0 0 0;
+        padding: 50px 0 0 0;
     }
     
     .section-title {
         font-size: 30px;
         line-height: 40px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
     
     .clients-logos {
@@ -652,7 +659,7 @@ body {
     }
     
     .clients-link {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         width: 50%;
     }
     
@@ -708,18 +715,14 @@ body {
     }
     
     .apps-cards {
-        flex-direction: column;
+        flex-direction: row;
     }
     
     .apps-card {
         text-align: center;
-        border-bottom: 1px solid #000000;
+        border-bottom: none;
         padding-right: 10px;
         padding-left: 10px;
-    }
-
-    .apps-card:last-child {
-        margin-bottom: 0;
     }
     
     .apps-card-text {
@@ -754,11 +757,16 @@ body {
 
     .chief {
         padding: 0;
+        padding-top: 10px;
     }
     
     .chief-box {
         flex-direction: column-reverse;
-        
+        align-items: center;
+    }
+
+    .chief-image {
+        width: 50%;
     }
     
     .chief-text {
@@ -767,8 +775,10 @@ body {
         padding: 20px 10px 0 10px;
     }
     
-    .revolut-link {
+    .clients-link.revolut-link {
+        width: 238px;
         margin-top: 20px;
+        margin-bottom: 0;
         justify-content: flex-start;
     }
 
@@ -829,22 +839,21 @@ body {
     .case-studies {
         width: 100%;
         margin-bottom: 20px;
-    }
-    
-    .case-studies-title {
         text-align: center;
     }
-    
+
     .case-studies-image {
-        width: 100%;
+        width: 50%;
     }
     
     .clients-link.specialized-link {
         padding-left: 5px;
+        margin: 0 auto 10px auto;
     }
     
     .footer-description-text {
         padding: 0 10px 0 10px;
+        text-align: center;
     }
 
     .footer-description-text-after {
@@ -864,7 +873,7 @@ body {
 
     .footer-bottom {
         padding: 16px 10px 16px 10px;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .footer-bottom-text {
@@ -877,6 +886,60 @@ body {
 
     .footer-bottom-right {
         display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-box {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-logo {
+        margin-bottom: 20px;
+    }
+
+    .nav-item {
+        margin-bottom: 20px;
+    }
+
+    .clients-link {
+        margin-bottom: 30px;
+    }
+
+    .apps-cards {
+        flex-direction: column;
+    }
+    
+    .apps-card {
+        border-bottom: 1px solid #000000;
+    }
+
+    .apps-card:last-child {
+        margin-bottom: 0;
+    }
+
+    .chief {
+        padding: 0;
+    }
+
+    .chief-image {
+        width: 100%;
+    }
+    
+    .case-studies-image {
+        width: 100%;
+    }
+
+    .footer-bottom {
         flex-direction: column;
     }
 }
